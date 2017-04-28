@@ -1,0 +1,29 @@
+{
+  "name": "framework-scss",
+  "version": "1.0.0",
+  "description": "Framework de Sass escalable y sostenible.",
+  "main": "example.main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javipuche/framework-scss.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "framework"
+  ],
+  "author": "Javier Puche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javipuche/framework-scss/issues"
+  },
+  "homepage": "https://github.com/javipuche/framework-scss#readme",
+  "dependencies": {
+    "mediaqueries-sass-mixin": "^1.2.1",
+    "normalize.css": "^6.0.0"
+  }
+}
