@@ -76,7 +76,56 @@ Por lo tanto aunque yo la explique aquí es recomendable que os paséis por su r
 - ```/components```: Componentes UI del proyecto (ej. .c-slider {}, .c-btn {}, .c-heading {}).
 - ```/utilities```: Clases con una especificidad alta, son clases que sobreescriben estilos y clases de ayuda (ej. .u-hidden {}, .u-text-center {}).
 
+## Nomenclatura
+
+### Archivos
+
+- Cada archivo que vaya a ser importado tiene que empezar un un guión bajo ```_```.
+- Cuando se crea un archivo tiene que empezar por lo que es (normalmente el nombre del directorio) seguido de un punto (ej. ```_settings.```).
+- Siempre en minúsculas y los espacios separados por un guión medio ```-```.
+- Los nombres tienen que ser descriptivos de lo que contienen. Es recomendable usar el nombre de la clase css, a menos que haya más de una (ej. ```_components.buttons.scss```).
+
+### Clases
+
+El proyecto usa un sistema de prefijos en las clases para poder saber que es ese elemento con un simple vistazo, así sabemos donde ir a buscar el archivo después.
+
+- ```o-```: Objects
+- ```c-```: Components
+- ```u-```: Utilities
+
+Por otro lado tenemos otros prefijos realmente útiles:
+
+ - ```t-```: Se usa para aplicar un theme de estilos a un componente/s.
+ - ```s-```: Se utiliza para dar estilos a un conjunto de elementos HTML, por ejemplo el código generado por un CMS. Hay que usarlo con cuidado ya que se nos puede ir de las manos el anidamiento.
+ - ```is-```, ```has-```: Se utilizan para aplicar estilos concretos cuando se cumple un estado o una condición (ej. .is-active {}, .has-icon {}).
+ - ```js-``` Significa que este elemento es afectado por el javascript. Nunca se tienen que dar estilos a estas clases, son solo para identificar los elementos en el JS.
+
+**Nota:** Puedes leer más sobre ello en ["More transparent UI code with Namespaces"](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/).
+
+#### BEM
+
+Todo lo anterior explicado se va a usar conjuntamente con la nomenclatura BEM (Bloque, Elemento, Modificador).
+
+```css
+.c-persona {} /* Seria el bloque */
+.c-persona__mano {} /* Seria el elemento */
+.c-persona__mano--derecha {} /* Seria el modificador */
+```
+
+Con este simple ejemplo queda claro que el bloque es la clase en si. El elemento se escribe con doble guión bajo ```__``` y el modificador se escribe con doble guión medio ```--```.
+
+**Nota:** Para saber que se puede y que no se puede hacer es recomendable que leas la [documentación de BEM](https://en.bem.info/methodology/).
+
+#### OOCSS
+
+OOCSS es una metodología basada en objetos CSS. Resumiéndodolo mucho se trata de separar la estructura de los estilos visuales para poder reaprovechar lo máximo posible el código.
+
+**Nota:** Puedes leer más sobre ello en ["Una introducción a Object Oriented CSS (OOCSS)"](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+
 ## Referencias
 
+- [Documentación de SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 - [inuitcss](https://github.com/inuitcss/inuitcss)
 - [Harry Roberts](https://csswizardry.com/)
+- [More transparent UI code with Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+- [Documentación de BEM](https://en.bem.info/methodology/).
