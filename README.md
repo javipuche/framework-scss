@@ -9,7 +9,7 @@ Puedes instalar el framework con los siguientes gestores de paquetes:
 ### Bower
 
 ```bash
-Bower install framework-scss --save
+bower install framework-scss --save
 ```
 
 ### Npm
