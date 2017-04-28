@@ -64,7 +64,9 @@ Este es el archivo global de variables del proyecto. Aquí puedes meter colores,
 
 ## Estructura de archivos
 
-Esta estructura está basada en [inuitcss](https://github.com/inuitcss/inuitcss) de [Harry Roberts](https://csswizardry.com/). Por lo tanto aunque yo la explique aquí es recomendable que os paséis por su repositorio y le echéis un vistazo.
+Esta estructura está basada en [inuitcss](https://github.com/inuitcss/inuitcss) de [Harry Roberts](https://csswizardry.com/) (sólo a nivel de directorios y nomenclatura).
+
+Por lo tanto aunque yo la explique aquí es recomendable que os paséis por su repositorio y le echéis un vistazo.
 
 - ```/settings```: Variables globales, opciones de ancho, configuraciones de estado, etc.
 - ```/tools```: Principalmente mixins y funciones.
