@@ -1,0 +1,39 @@
+/* =============================================================================
+SPACINGS
+============================================================================= */
+
+$core-spacing-directions: (
+  null: null,
+  '-top': '-top',
+  '-right': '-right',
+  '-bottom': '-bottom',
+  '-left': '-left',
+  '-horizontal': '-left' '-right',
+  '-vertical': '-top' '-bottom',
+) !default;
+
+$core-spacing-properties: (
+  'padding': 'padding',
+  'margin': 'margin',
+) !default;
+
+$core-spacing-sizes: (
+  null: $core-global-spacing,
+  '-tiny': round($core-global-spacing * 0.25),
+  '-small': round($core-global-spacing * 0.5),
+  '-large': round($core-global-spacing * 2),
+  '-huge': round($core-global-spacing * 4),
+  '-none': 0
+) !default;
+
+@each $property-namespace, $property in $core-spacing-properties {
+    @each $direction-namespace, $direction-rules in $core-spacing-directions {
+        @each $size-namespace, $size in $core-spacing-sizes {
+            .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+                @each $direction in $direction-rules {
+                    #{$property}#{$direction}: $size;
+                }
+            }
+        }
+    }
+}

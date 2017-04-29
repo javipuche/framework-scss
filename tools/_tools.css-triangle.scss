@@ -1,9 +1,9 @@
 /* =============================================================================
-CSS Triangle
+CSS TRIANGLE
 ============================================================================= */
 
 /**
- * Crea triangulos (rellenos) del color tamaño y dirección que elijas 
+ * Crea triangulos (rellenos) del color tamaño y dirección que elijas
  */
 
 @mixin css-triangle( $direction: 'bottom', $color: #000, $size: 6px ) {
