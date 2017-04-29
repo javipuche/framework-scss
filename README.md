@@ -99,6 +99,7 @@ Por otro lado tenemos otros prefijos realmente útiles:
  - ```s-```: Se utiliza para dar estilos a un conjunto de elementos HTML, por ejemplo el código generado por un CMS. Hay que usarlo con cuidado ya que se nos puede ir de las manos el anidamiento.
  - ```is-```, ```has-```: Se utilizan para aplicar estilos concretos cuando se cumple un estado o una condición (ej. .is-active {}, .has-icon {}).
  - ```js-``` Significa que este elemento es afectado por el javascript. Nunca se tienen que dar estilos a estas clases, son solo para identificar los elementos en el JS.
+ - ```_``` Prefijo de la vergüenza, se utiliza al principio de una clase cuando tienes que hacer alguna chapuza.
 
 **Nota:** Puedes leer más sobre ello en ["More transparent UI code with Namespaces"](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/).
 
