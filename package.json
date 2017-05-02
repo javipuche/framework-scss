@@ -1,6 +1,6 @@
 {
   "name": "framework-scss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Framework de Sass escalable y sostenible.",
   "main": "example.main.scss",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/javipuche/framework-scss#readme",
   "dependencies": {
+    "flexbox-grid-mixins": "^0.1.3",
     "mediaqueries-sass-mixin": "^1.2.1",
     "normalize.css": "^6.0.0"
   }
