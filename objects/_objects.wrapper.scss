@@ -1,0 +1,15 @@
+/* =============================================================================
+WRAPPER
+============================================================================= */
+
+$core-wrapper-max-width: 20px !default;
+$core-wrapper-padding-left: 20px !default;
+$core-wrapper-padding-right: 20px !default;
+
+.o-wrapper {
+    max-width: $core-wrapper-max-width;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: $core-wrapper-padding-left;
+    padding-right: $core-wrapper-padding-right;
+}
