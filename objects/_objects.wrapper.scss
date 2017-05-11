@@ -1,15 +1,35 @@
-/* =============================================================================
-WRAPPER
-============================================================================= */
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
 
 $core-wrapper-max-width: 1200px !default;
-$core-wrapper-padding-left: 20px !default;
-$core-wrapper-padding-right: 20px !default;
+$core-wrapper-padding: 20px !default;
+
+$core-wrapper-sizes: (
+  '-tiny': $core-global-spacing-tiny,
+  '-small': $core-global-spacing-small,
+  '-large': $core-global-spacing-large,
+  '-huge': $core-global-spacing-huge,
+) !default;
 
 .o-wrapper {
-    max-width: $core-wrapper-max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $core-wrapper-padding-left;
-    padding-right: $core-wrapper-padding-right;
-}
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $core-wrapper-padding;
+  padding-left: $core-wrapper-padding;
+  max-width: $core-wrapper-max-width;
+
+
+// Sizes
+// ========================================================================== //
+
+  @each $size-name, $size-value in $core-wrapper-sizes {
+
+    &#{$size-name} {
+      padding-right: $size-value;
+      padding-left: $size-value;
+    }
+
+  }
+
+} // End wrapper

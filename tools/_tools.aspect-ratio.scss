@@ -1,29 +1,31 @@
-/* =============================================================================
-ASPECT RATIO
-============================================================================= */
+/* ==========================================================================
+   #ASPECT RATIO
+   ========================================================================== */
 
 @mixin aspect-ratio($width: 16, $height: 9, $img: true) {
-    position: relative;
+  position: relative;
 
-    &:before {
-        display: block;
-        content: "";
-        width: 100%;
-        padding-top: ($height / $width) * 100%;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  @if $img {
+    overflow: hidden;
+
+    > img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
     }
 
-    @if $img {
-        overflow: hidden;
+  }
 
-        > img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            object-fit: cover;
-        }
-    }
 }

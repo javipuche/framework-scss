@@ -1,6 +1,6 @@
-/* =============================================================================
-RESET
-============================================================================= */
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -9,22 +9,22 @@ dl, dd, ol, ul,
 figure,
 hr,
 fieldset, legend {
-    margin:  0;
-    padding: 0;
+  margin:  0;
+  padding: 0;
 }
 
 img,
 svg {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 fieldset {
-    min-width: 0;
-    border: 0;
+  min-width: 0;
+  border: 0;
 }

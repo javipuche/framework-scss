@@ -1,6 +1,6 @@
-/* =============================================================================
-SHARED
-============================================================================= */
+/* ==========================================================================
+   #SHARED
+   ========================================================================== */
 
 address,
 h1, h2, h3, h4, h5, h6,
@@ -10,10 +10,10 @@ figure,
 hr,
 table,
 fieldset {
-    margin-bottom: $core-global-spacing;
+  margin-bottom: $core-global-spacing;
 }
 
 dd, ol, ul {
-    margin-left: $core-global-spacing;
-    padding-left: $core-global-spacing;
+  margin-left: $core-global-spacing;
+  padding-left: $core-global-spacing;
 }

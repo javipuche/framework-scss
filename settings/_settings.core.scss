@@ -1,10 +1,14 @@
-/* =============================================================================
-CORE
-============================================================================= */
+/* ==========================================================================
+   #CORE
+   ========================================================================== */
 
 /**
  * Variables del framework
  */
 
-// SPACINGS
 $core-global-spacing: 20px !default;
+
+$core-global-spacing-tiny: round($core-global-spacing * 0.25) !default;
+$core-global-spacing-small: round($core-global-spacing * 0.5) !default;
+$core-global-spacing-large: round($core-global-spacing * 2) !default;
+$core-global-spacing-huge: round($core-global-spacing * 4) !default;
