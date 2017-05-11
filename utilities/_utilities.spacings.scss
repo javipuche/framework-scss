@@ -21,8 +21,8 @@ $core-spacing-sizes: (
   null: $core-global-spacing,
   '-tiny': $core-global-spacing-tiny,
   '-small': $core-global-spacing-small,
-  '-large': $core-global-spacing-large),
-  '-huge': $core-global-spacing-huge),
+  '-large': $core-global-spacing-large,
+  '-huge': $core-global-spacing-huge,
   '-none': 0
 ) !default;
 
