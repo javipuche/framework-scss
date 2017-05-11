@@ -3,11 +3,12 @@
    ========================================================================== */
 
 $core-wrapper-max-width: 1200px !default;
-$core-wrapper-padding: 20px !default;
+$core-wrapper-padding: $core-global-spacing !default;
 
 $core-wrapper-sizes: (
   '-tiny': $core-global-spacing-tiny,
   '-small': $core-global-spacing-small,
+  null: $core-global-spacing,
   '-large': $core-global-spacing-large,
   '-huge': $core-global-spacing-huge,
 ) !default;
@@ -28,28 +29,13 @@ $core-wrapper-sizes: (
 // Sizes Classes
 // ========================================================================== //
 
-  @each $size-name, $size-value in $core-wrapper-sizes {
+  @if $config-wrapper-size-classes-output {
 
-    &#{$size-name} {
-      padding-right: $size-value;
-      padding-left: $size-value;
-    }
+    @each $size-name, $size-value in $core-wrapper-sizes {
 
-  }
+      @if $size-name != null {
 
-
-
-
-// Responsive Classes
-// ========================================================================== //
-
-  @each $size-name, $size-value in $core-wrapper-sizes {
-
-    @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-
-      @include breakpoint($breakpoint-value) {
-
-        &#{$size-name}\@#{$breakpoint-name} {
+        &#{$size-name} {
           padding-right: $size-value;
           padding-left: $size-value;
         }
@@ -59,6 +45,7 @@ $core-wrapper-sizes: (
     }
 
   }
+
 
 
 

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #WRAPPER RESPONSIVE
+   ========================================================================== */
+
+$core-wrapper-responsive-sizes: (
+  '-tiny': $core-global-spacing-tiny,
+  '-small': $core-global-spacing-small,
+  null: $core-global-spacing,
+  '-large': $core-global-spacing-large,
+  '-huge': $core-global-spacing-huge,
+) !default;
+
+
+
+
+.o-wrapper {
+
+  @if $config-wrapper-responsive-classes-output {
+
+    @each $size-name, $size-value in $core-wrapper-responsive-sizes {
+
+      @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+        @include breakpoint($breakpoint-value) {
+
+          &#{$size-name}\@#{$breakpoint-name} {
+            padding-right: $size-value;
+            padding-left: $size-value;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

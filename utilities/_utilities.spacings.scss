@@ -4,12 +4,12 @@
 
 $core-spacing-directions: (
   null: null,
+  '-horizontal': '-left' '-right',
+  '-vertical': '-top' '-bottom',
   '-top': '-top',
   '-right': '-right',
   '-bottom': '-bottom',
   '-left': '-left',
-  '-horizontal': '-left' '-right',
-  '-vertical': '-top' '-bottom',
 ) !default;
 
 $core-spacing-properties: (
@@ -26,15 +26,39 @@ $core-spacing-sizes: (
   '-none': 0
 ) !default;
 
+
+
+
 @each $property-namespace, $property in $core-spacing-properties {
 
-   @each $direction-namespace, $direction-rules in $core-spacing-directions{
+  .u-#{$property-namespace} {
 
-    @each $size-namespace, $size in $core-spacing-sizes {
+    @each $direction-namespace, $direction-rules in $core-spacing-directions{
 
-      .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-        @each $direction in $direction-rules {
-          #{$property}#{$direction}: $size;
+      &#{$direction-namespace} {
+
+        @if $config-spacing-sizes-output {
+
+          @each $size-namespace, $size in $core-spacing-sizes {
+
+            &#{$size-namespace} {
+
+              @each $direction in $direction-rules {
+                #{$property}#{$direction}: $size;
+              }
+
+            }
+
+          }
+
+        }
+
+        @else {
+
+          @each $direction in $direction-rules {
+            #{$property}#{$direction}: $core-global-spacing;
+          }
+
         }
 
       }

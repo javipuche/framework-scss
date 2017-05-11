@@ -1,0 +1,58 @@
+/* ==========================================================================
+   #SPACINGS RESPONSIVE
+   ========================================================================== */
+
+$core-spacing-responsive-directions: (
+  null: null,
+  "-bottom": "-bottom",
+  "-top": "-top",
+) !default;
+
+$core-spacing-responsive-properties: (
+  'padding': 'padding',
+  'margin': 'margin',
+) !default;
+
+$core-spacing-responsive-sizes: (
+  null: $core-global-spacing,
+  '-tiny': $core-global-spacing-tiny,
+  '-small': $core-global-spacing-small,
+  '-large': $core-global-spacing-large,
+  '-huge': $core-global-spacing-huge,
+  '-none': 0
+) !default;
+
+
+
+
+@each $property-namespace, $property in $core-spacing-responsive-properties {
+
+   @each $direction-namespace, $direction-rules in $core-spacing-responsive-directions{
+
+    @each $size-namespace, $size in $core-spacing-responsive-sizes {
+
+      @if $config-spacing-responsive-classes-output {
+
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}\@#{$breakpoint-name} {
+
+              @each $direction in $direction-rules {
+                #{$property}#{$direction}: $size;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

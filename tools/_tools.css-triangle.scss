@@ -1,20 +1,18 @@
-/* ==========================================================================
-   #CSS TRIANGLE
-   ========================================================================== */
+// ==========================================================================
+// #CSS TRIANGLE
+// ========================================================================== //
 
-/**
- * Crea triangulos (rellenos) del color tamaño y dirección que elijas
- */
+// Crea triangulos (rellenos) del color tamaño y dirección que elijas
 
 @mixin css-triangle( $direction: 'bottom', $color: #000, $size: 6px ) {
   display: block;
-  height: 0;
   width: 0;
+  height: 0;
 
   @if $direction == 'top' {
-    border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-bottom: $size solid $color;
+    border-left: $size solid transparent;
   }
 
   @else if $direction == 'right' {
@@ -46,8 +44,8 @@
   }
 
   @else if $direction == 'bottom-left' {
-    border-bottom: $size solid $color;
     border-right: $size solid transparent;
+    border-bottom: $size solid $color;
   }
 
   @else if $direction == 'bottom-right' {

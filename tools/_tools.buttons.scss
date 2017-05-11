@@ -1,21 +1,24 @@
-/* ==========================================================================
-   #BUTTONS
-   ========================================================================== */
+// ==========================================================================
+// #BUTTONS
+// ========================================================================== //
 
-/**
- * Estructura y algunos resets para los botones. Aquí no tienen que ir estilos
- * visuales, solo estructurales
- */
+// Estructura y algunos resets para los botones. Aquí no tienen que ir estilos
+// visuales, solo estructurales
 
-@mixin btn-base($padding: 10px 20px) {
+@mixin btn-base($padding: null) {
   display: inline-flex;
+  margin: 0;
+
+  @if $padding {
+    padding: $padding;
+  }
+
+  border: 0;
+  background: none;
+  font-size: inherit;
+  cursor: pointer;
+
   justify-content: center;
   align-items: center;
-  font-size: inherit;
-  margin: 0;
-  cursor: pointer;
-  padding: $padding;
   appearance: none;
-  background: none;
-  border: 0;
 }
