@@ -12,6 +12,9 @@ $core-wrapper-sizes: (
   '-huge': $core-global-spacing-huge,
 ) !default;
 
+
+
+
 .o-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -20,7 +23,9 @@ $core-wrapper-sizes: (
   max-width: $core-wrapper-max-width;
 
 
-// Sizes
+
+
+// Sizes Classes
 // ========================================================================== //
 
   @each $size-name, $size-value in $core-wrapper-sizes {
@@ -31,5 +36,30 @@ $core-wrapper-sizes: (
     }
 
   }
+
+
+
+
+// Responsive Classes
+// ========================================================================== //
+
+  @each $size-name, $size-value in $core-wrapper-sizes {
+
+    @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+      @include breakpoint($breakpoint-value) {
+
+        &#{$size-name}\@#{$breakpoint-name} {
+          padding-right: $size-value;
+          padding-left: $size-value;
+        }
+
+      }
+
+    }
+
+  }
+
+
 
 } // End wrapper
