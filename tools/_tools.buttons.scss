@@ -1,9 +1,11 @@
-// ==========================================================================
-// #BUTTONS
-// ========================================================================== //
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
 
-// Estructura y algunos resets para los botones. Aquí no tienen que ir estilos
-// visuales, solo estructurales
+/**
+ * Estructura y algunos resets para los botones. Aquí no tienen que ir estilos
+ * visuales, solo estructurales
+ */
 
 @mixin btn-base($padding: null) {
   display: inline-flex;

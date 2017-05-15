@@ -1,0 +1,296 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+$core-grid-colums: 12 !default;
+$core-grid-gutter: $core-global-spacing !default;
+
+@if $config-grid-enabled {
+
+
+  .o-grid {
+
+    @include grid($gutter: $core-grid-gutter);
+
+    @if $config-grid-modifiers-output {
+
+
+      &--reverse {
+        flex-direction: row-reverse;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              flex-direction: row-reverse;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--start {
+        justify-content: flex-start;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              justify-content: flex-start;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--center {
+        justify-content: center;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              justify-content: center;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--end {
+        justify-content: flex-end;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              justify-content: flex-end;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--top {
+        align-items: flex-start;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              align-items: flex-start;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--middle {
+        align-items: center;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              align-items: center;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--bottom {
+        align-items: flex-end;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              align-items: flex-end;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--around {
+        justify-content: space-around;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              justify-content: space-around;
+            }
+
+          }
+
+        }
+
+      }
+
+
+      &--between {
+        justify-content: space-between;
+
+        // Media queries
+        @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+          @include breakpoint($breakpoint-value) {
+
+            &\@#{$breakpoint-name} {
+              justify-content: space-between;
+            }
+
+          }
+
+        }
+
+      }
+
+
+    } // End if
+
+
+    &__item {
+      @include grid-col($gutter: $core-grid-gutter);
+
+
+      // Widths
+      @for $i from 1 through $core-grid-colums {
+
+        &-#{$i} {
+          @include grid-col($columns: $i, $grid-columns: $core-grid-colums, $gutter: $core-grid-gutter);
+
+          // Media queries
+          @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+            @include breakpoint($breakpoint-value) {
+
+              &\@#{$breakpoint-name} {
+                @include grid-col($columns: $i, $grid-columns: $core-grid-colums, $gutter: $core-grid-gutter);
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+      @if $config-grid-item-modifiers-output {
+
+
+        // Offsets
+        @for $i from 1 through ($core-grid-colums - 1) {
+
+          &--offset-#{$i} {
+            margin-left: $i * 100% / $core-grid-colums;
+
+            // Media queries
+            @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+              @include breakpoint($breakpoint-value) {
+
+                &\@#{$breakpoint-name} {
+                  margin-left: $i * 100% / $core-grid-colums;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+
+        // First
+        &--first {
+          order: -1;
+
+          // Media queries
+          @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+            @include breakpoint($breakpoint-value) {
+
+              &\@#{$breakpoint-name} {
+                order: -1;
+              }
+
+            }
+
+          }
+
+        }
+
+
+        // Last
+        &--last {
+          order: 1;
+
+          // Media queries
+          @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+            @include breakpoint($breakpoint-value) {
+
+              &\@#{$breakpoint-name} {
+                order: 1;
+              }
+
+            }
+
+          }
+
+        }
+
+
+      } // End if
+
+
+    } // End item
+
+
+  } // End grid
+
+
+} // End if

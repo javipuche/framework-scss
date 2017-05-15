@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+/**
+ * Mixin para el contenedor del grid
+ */
+
+@mixin grid (
+  $gutter: null,
+  $display: flex
+) {
+
+  display: $display;
+  flex-wrap: wrap;
+
+  @if $gutter {
+    margin-left: -$gutter;
+    margin-bottom: -$gutter;
+  }
+
+}
+
+/**
+ * Mixin para los items del grid
+ */
+
+@mixin grid-col (
+  $columns: null,
+  $grid-columns: 12,
+  $gutter: null
+) {
+
+  flex-grow: 1;
+
+  @if $columns {
+    flex-basis: $columns * 100% / $grid-columns;
+    max-width: $columns * 100% / $grid-columns;
+  }
+
+  @else {
+    flex-basis: 0;
+  }
+
+  @if $gutter {
+    padding-left: $gutter;
+    padding-bottom: $gutter;
+  }
+
+}

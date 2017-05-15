@@ -14,8 +14,6 @@ $core-wrapper-sizes: (
 ) !default;
 
 
-
-
 .o-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -24,10 +22,8 @@ $core-wrapper-sizes: (
   max-width: $core-wrapper-max-width;
 
 
-
-
-// Sizes Classes
-// ========================================================================== //
+/* Sizes Classes
+   ========================================================================== */
 
   @if $config-wrapper-size-classes-output {
 
@@ -45,8 +41,6 @@ $core-wrapper-sizes: (
     }
 
   }
-
-
 
 
 } // End wrapper
