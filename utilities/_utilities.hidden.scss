@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #HIDDEN
+   ========================================================================== */
+
+.u-hidden {
+  display: none;
+
+  // Media queries
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+    @include breakpoint($breakpoint-value) {
+
+      &\@#{$breakpoint-name} {
+        display: none;
+      }
+
+    }
+
+  }
+
+}

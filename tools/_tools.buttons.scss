@@ -5,6 +5,8 @@
 /**
  * Estructura y algunos resets para los botones. Aquí no tienen que ir estilos
  * visuales, solo estructurales
+ *
+ * 1. Reset para la etiqueta button
  */
 
 @mixin btn-base($padding: null) {
@@ -15,12 +17,12 @@
     padding: $padding;
   }
 
-  border: 0;
-  background: none;
-  font-size: inherit;
+  border: 0; /* [1] */
+  background: none; /* [1] */
+  font-size: inherit; /* [1] */
   cursor: pointer;
 
   justify-content: center;
   align-items: center;
-  appearance: none;
+  appearance: none; /* [1] */
 }

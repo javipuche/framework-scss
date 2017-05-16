@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #VISIBLE
+   ========================================================================== */
+
+.u-visible {
+  display: block;
+
+  // Media queries
+  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+    @include breakpoint($breakpoint-value) {
+
+      &\@#{$breakpoint-name} {
+        display: block;
+      }
+
+    }
+
+  }
+
+  &-flex {
+    display: flex;
+
+    // Media queries
+    @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+      @include breakpoint($breakpoint-value) {
+
+        &\@#{$breakpoint-name} {
+          display: flex;
+        }
+
+      }
+
+    }
+
+  }
+
+}
