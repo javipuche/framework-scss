@@ -1,6 +1,6 @@
 {
   "name": "framework-scss",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Framework de Sass escalable y sostenible.",
   "main": "example.main.scss",
   "scripts": {
