@@ -4,6 +4,9 @@
 
 .u-text {
 
+/* Align
+   ========================================================================== */
+
   &-left {
     text-align: left;
   }
@@ -18,6 +21,25 @@
 
   &-justify {
     text-align: justify;
+  }
+
+/* Weight
+   ========================================================================== */
+
+  &-light {
+    font-weight: 300;
+  }
+
+  &-semibold {
+    font-weight: 500;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-black {
+    font-weight: 900;
   }
 
 }
