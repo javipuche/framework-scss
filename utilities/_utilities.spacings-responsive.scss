@@ -23,8 +23,6 @@ $core-spacing-responsive-sizes: (
 ) !default;
 
 
-
-
 @each $property-namespace, $property in $core-spacing-responsive-properties {
 
    @each $direction-namespace, $direction-rules in $core-spacing-responsive-directions{

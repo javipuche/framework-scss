@@ -27,8 +27,6 @@ $core-spacing-sizes: (
 ) !default;
 
 
-
-
 @each $property-namespace, $property in $core-spacing-properties {
 
   .u-#{$property-namespace} {
