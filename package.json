@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/javipuche/framework-scss#readme",
   "dependencies": {
-    "flexbox-grid-mixins": "^0.1.3",
     "mediaqueries-sass-mixin": "^1.2.1",
     "normalize.css": "^6.0.0"
   }

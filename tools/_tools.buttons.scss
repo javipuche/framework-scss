@@ -12,17 +12,16 @@
 @mixin btn-base($padding: null) {
   display: inline-flex;
   margin: 0;
-
-  @if $padding {
-    padding: $padding;
-  }
-
   border: 0; /* [1] */
   background: none; /* [1] */
   font-size: inherit; /* [1] */
-  cursor: pointer;
+  cursor: pointer; /* [1] */
 
   justify-content: center;
   align-items: center;
   appearance: none; /* [1] */
+
+  @if $padding {
+    padding: $padding;
+  }
 }

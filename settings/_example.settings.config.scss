@@ -7,20 +7,24 @@
  */
 
 
+// OBJECTS
+
 /* Wrapper
    ========================================================================== */
 
 $config-wrapper-size-classes-output: true !default;
-$config-wrapper-responsive-classes-output: true !default;
+$config-wrapper-responsive-classes-output: false !default;
 
 
 /* Grid
    ========================================================================== */
 
-$config-grid-enabled: true !default;
+$config-grid-enabled: false !default;
 $config-grid-modifiers-output: false !default;
 $config-grid-item-modifiers-output: false !default;
 
+
+// UTILITIES
 
 /* Spacings
    ========================================================================== */
@@ -40,3 +44,27 @@ $config-spacing-sizes-output: true !default;
  */
 
 $config-spacing-responsive-classes-output: false !default;
+
+
+/* Text
+   ========================================================================== */
+
+$config-text-classes-output: false !default;
+
+
+/* Flex
+   ========================================================================== */
+
+$config-flex-classes-output: false !default;
+
+
+/* Visible
+   ========================================================================== */
+
+$config-visible-classes-output: false !default;
+
+
+/* Hidden
+   ========================================================================== */
+
+$config-hidden-classes-output: false !default;

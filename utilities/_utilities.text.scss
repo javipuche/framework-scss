@@ -2,44 +2,67 @@
    #TEXT
    ========================================================================== */
 
-.u-text {
+@if $config-text-classes-output {
 
-/* Align
-   ========================================================================== */
+  .u-text {
 
-  &-left {
-    text-align: left;
+  /* Align
+     ========================================================================== */
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+
+    &-center {
+      text-align: center;
+    }
+
+    &-justify {
+      text-align: justify;
+    }
+
+  /* Weight
+     ========================================================================== */
+
+    &-light {
+      font-weight: 300;
+    }
+
+    &-regular {
+      font-weight: 400;
+    }
+
+    &-semibold {
+      font-weight: 500;
+    }
+
+    &-bold {
+      font-weight: 700;
+    }
+
+    &-black {
+      font-weight: 900;
+    }
+
+  /* Transform
+     ========================================================================== */
+
+    &-uppercase {
+      text-transform: uppercase;
+    }
+
+    &-lowercase {
+      text-transform: lowercase;
+    }
+
+    &-capitalize {
+      text-transform: capitalize;
+    }
+
   }
 
-  &-right {
-    text-align: right;
-  }
-
-  &-center {
-    text-align: center;
-  }
-
-  &-justify {
-    text-align: justify;
-  }
-
-/* Weight
-   ========================================================================== */
-
-  &-light {
-    font-weight: 300;
-  }
-
-  &-semibold {
-    font-weight: 500;
-  }
-
-  &-bold {
-    font-weight: 700;
-  }
-
-  &-black {
-    font-weight: 900;
-  }
-
-}
+} // End if

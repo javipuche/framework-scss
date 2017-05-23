@@ -2,35 +2,47 @@
    #FLEX
    ========================================================================== */
 
-.u-flex {
-  display: flex;
+@if $config-flex-classes-output {
 
-  &-inline {
-    display: inline-flex;
+  .u-flex {
+    display: flex;
+
+    &-inline {
+      display: inline-flex;
+    }
+
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+
+    &-around {
+      justify-content: space-around;
+    }
+
+    &-top {
+      align-items: flex-start;
+    }
+
+    &-middle {
+      align-items: center;
+    }
+
+    &-bottom {
+      align-items: flex-end;
+    }
+
   }
 
-  &-left {
-    justify-content: flex-start;
-  }
-
-  &-center {
-    justify-content: center;
-  }
-
-  &-right {
-    justify-content: flex-end;
-  }
-
-  &-top {
-    align-items: flex-start;
-  }
-
-  &-middle {
-    align-items: center;
-  }
-
-  &-bottom {
-    align-items: flex-end;
-  }
-
-}
+} // End if

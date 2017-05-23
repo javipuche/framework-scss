@@ -2,24 +2,10 @@
    #VISIBLE
    ========================================================================== */
 
-.u-visible {
-  display: block;
+@if $config-visible-classes-output {
 
-  // Media queries
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
-
-    @include breakpoint($breakpoint-value) {
-
-      &\@#{$breakpoint-name} {
-        display: block;
-      }
-
-    }
-
-  }
-
-  &-flex {
-    display: flex;
+  .u-visible {
+    display: block;
 
     // Media queries
     @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
@@ -27,7 +13,25 @@
       @include breakpoint($breakpoint-value) {
 
         &\@#{$breakpoint-name} {
-          display: flex;
+          display: block;
+        }
+
+      }
+
+    }
+
+    &-flex {
+      display: flex;
+
+      // Media queries
+      @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+
+        @include breakpoint($breakpoint-value) {
+
+          &\@#{$breakpoint-name} {
+            display: flex;
+          }
+
         }
 
       }
@@ -36,4 +40,4 @@
 
   }
 
-}
+} // End if

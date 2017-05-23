@@ -2,20 +2,24 @@
    #HIDDEN
    ========================================================================== */
 
-.u-hidden {
-  display: none;
+@if $config-hidden-classes-output {
 
-  // Media queries
-  @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+  .u-hidden {
+    display: none;
 
-    @include breakpoint($breakpoint-value) {
+    // Media queries
+    @each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
 
-      &\@#{$breakpoint-name} {
-        display: none;
+      @include breakpoint($breakpoint-value) {
+
+        &\@#{$breakpoint-name} {
+          display: none;
+        }
+
       }
 
     }
 
   }
 
-}
+} // End if
