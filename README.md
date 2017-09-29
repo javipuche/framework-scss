@@ -1,3 +1,5 @@
+***ATENCIÓN:*** *Se ha dejado de actualizar este repositorio.*
+
 # Framework SCSS
 
 Framework de Sass escalable y sostenible.
